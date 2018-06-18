@@ -61,8 +61,22 @@
 		  <p>Finds the Min/Max of average bet amount for each market type.</p>
 		  <p><button class="w3-button w3-light-grey w3-block"><a href="queries/bet_amount_by_market_type.php"> Go To Query </a></button></p>
 		</div>
+		<div class="w3-col l3 m6 w3-margin-bottom">
+		  <h3>Delete Event</h3>
+		  <p class="w3-opacity">Delete Query</p>
+		  <p>Deletes an event from the database if no bets have been placed.</p>
+		  <p><button class="w3-button w3-light-grey w3-block"><a href="queries/delete_event.php"> Go To Query </a></button></p>
+		</div>	
 	  </div>
-
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="queries">Customer Queries</h3>
+	<div class="w3-row-padding w3-grayscale">	
+		<div class="w3-col l3 m6 w3-margin-bottom">
+		  <h3>Make Transaction</h3>
+		  <p class="w3-opacity">Update Query</p>
+		  <p>Allows customers to update the database by making a deposit/witdrawal.</p>
+		  <p><button class="w3-button w3-light-grey w3-block"><a href="queries/make_transaction.php"> Go To Query </a></button></p>
+		</div>
+    </div>
 <!-- End page content -->
 </div>
 
