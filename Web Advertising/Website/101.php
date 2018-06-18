@@ -191,30 +191,17 @@ body {
 
 <div class="navbar">
   <a href="https://projectdemos.uqcloud.net/webadvertisingdb/homepage.php">Logout</a>
-  <a class = "active" href="https://projectdemos.uqcloud.net/webadvertisingdb/000.php">Queries</a>
+  <a class = "active" href="https://projectdemos.uqcloud.net/webadvertisingdb/101.php">Queries</a>
 </div>
 
 <div class="row">
     <div class="main">
-      <p>Welcome Back, Administrator!. What would you like to do?</p>
+      <p>Welcome back Advertiser, The Cat. What would you like to do?</p>
       <div class="vertical-menu">
         <a href="#" class="active">Select from choices below</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q1.php">Get information about Advertisers in the system</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q2.php">Get information about Ads in the system</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q3.php">Get attributes of users clicking on Ads</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q4.php">Generate Advertiser Bill</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q5.php">Get top Revenue generating Advertisers</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q6.php">Get competitive Advertisers (Bidding on all Ad slots)</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q7.php">Get information about Gender distribution among users</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q8.php">Get information about Age distribution by Gender among users</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q9.php">Get information about Age, Click and Revenue distribution across ad space</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q10.php">Get information about Clicks at Ad grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q11.php">Get information about Clicks at Advertiser grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q12.php">Get information about Revenue at Ad grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q13.php">Get information about Revenue at Advertiser grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q14.php">Get information about Average cost per click of Ads</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q15.php">Get information about Slot bidding by Advertisers</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q16.php">Get information about Advertiser performance across slots</a>
+        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/101_q1.php">Get information about your Ads in the system</a>
+        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/101_q2.php">Get attributes of users clicking on your Ads</a>
+         <a href="https://projectdemos.uqcloud.net/webadvertisingdb/101_q3.php">Get performance details of your Ads</a>
       </div>
     </div>
 
@@ -222,8 +209,7 @@ body {
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">About Database</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/Schema.php">Schema</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/SQL_Queries.php">SQL Queries</a>
+        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/Glossary_101.php">Glossary</a>
       </div>
     </div>
   </div>

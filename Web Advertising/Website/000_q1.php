@@ -4,7 +4,7 @@
 <title>UofU Web Advertising Portal</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {
     box-sizing: border-box;
@@ -125,28 +125,6 @@ body {
 
 .show {display:block;}
 
-.vertical-menu {
-    /*width: 600px; /* Set a width if you like */
-}
-
-.vertical-menu a {
-    background-color: #eee; /* Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-}
-
-.vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-}
-
-.vertical-menu a.active {
-    background-color: #1abc9c; /* Add a green color to the "active/current" link */
-    color: white;
-}
-
-
 /* Footer */
 .footer {
     padding: 1px;
@@ -160,10 +138,34 @@ body {
     color: white; /* Add a text color */
     padding: 16px 30px; /* Add some padding */
     cursor: pointer; /* Add a pointer cursor on mouse-over */
+    font-size: 16px;
 }
 
 .home {background-color: #1abc9c;} 
 .home:hover {background-color: #000000;}
+
+.btn {background-color: #1abc9c;} 
+.btn:hover {background-color: #000000;}
+
+
+.table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+th {
+    padding: 5px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -190,44 +192,79 @@ body {
 </div>
 
 <div class="navbar">
-  <a href="https://projectdemos.uqcloud.net/webadvertisingdb/homepage.php">Logout</a>
-  <a class = "active" href="https://projectdemos.uqcloud.net/webadvertisingdb/000.php">Queries</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/homepage.php">Logout</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000.php">Queries</a>
+    <a class="active" href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q1.php">Current Query</a>
 </div>
 
 <div class="row">
-    <div class="main">
-      <p>Welcome Back, Administrator!. What would you like to do?</p>
-      <div class="vertical-menu">
-        <a href="#" class="active">Select from choices below</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q1.php">Get information about Advertisers in the system</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q2.php">Get information about Ads in the system</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q3.php">Get attributes of users clicking on Ads</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q4.php">Generate Advertiser Bill</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q5.php">Get top Revenue generating Advertisers</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q6.php">Get competitive Advertisers (Bidding on all Ad slots)</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q7.php">Get information about Gender distribution among users</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q8.php">Get information about Age distribution by Gender among users</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q9.php">Get information about Age, Click and Revenue distribution across ad space</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q10.php">Get information about Clicks at Ad grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q11.php">Get information about Clicks at Advertiser grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q12.php">Get information about Revenue at Ad grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q13.php">Get information about Revenue at Advertiser grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q14.php">Get information about Average cost per click of Ads</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q15.php">Get information about Slot bidding by Advertisers</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q16.php">Get information about Advertiser performance across slots</a>
-      </div>
-    </div>
+  <div class="main"
+    <p>Advertisers in the system</p>
+    <br>
+    <p><b>SQL Query</b></p>
+    <p><i>SELECT * FROM advertiser</i></p>
+    <br>
+    <div class="tabcontent">
+      <?php 
+        // SETUP PHP CONNECTION
+        $servername = "localhost";
+        $username = "root";
+        $password = "559711dfc2eae1f6";
+        $dbname = "webadvertisement";
+        
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        
+        if ($conn->connect_error) {
+            die("<h3>Connection failed: ".$conn->connect_error."</h3>");
+        }
+    ?>
 
-  <div class="side">
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">About Database</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/Schema.php">Schema</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/SQL_Queries.php">SQL Queries</a>
-      </div>
-    </div>
-  </div>
+    <table class="table">
+      <thead>
+            <tr>
+                <th scope="col">AdvertiserID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Domain</th>
+            </tr>
+        </thead>
+      <tbody id="studentTable">
+        <?php
+        // FILL TABLE WITH DATA ON CLICK 
+        if(isset($_POST["submit"])) {
+        // get all our student data
+        $query = "SELECT * FROM advertiser";
+        $result = mysqli_query($conn, $query);
+        // put all our results into a html table
+        while ($rows = mysqli_fetch_array($result)) {
+            echo "<tr>";
+            echo "<td>".$rows["AdvertiserID"]."</td>";
+            echo "<td>".$rows["Name"]."</td>";
+            echo "<td>".$rows["Domain"]."</td>";
+            echo "</tr>";
+          }
+        }
+            ?>
+        </tbody>
+    </table>
+    <form action="" method="post">
+        <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Get Data" style="text-align:right;margin:10px" />
+    </form>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </div>
+    </div>
+    
+    <div class="side">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">About Database</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="https://projectdemos.uqcloud.net/webadvertisingdb/Schema.php">Schema</a>
+                <a href="https://projectdemos.uqcloud.net/webadvertisingdb/SQL_Queries.php">SQL Queries</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>

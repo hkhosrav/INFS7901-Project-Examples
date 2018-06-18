@@ -85,6 +85,7 @@ body {
     padding: 20px;
 }
 
+
 .dropbtn {
     background-color: #1abc9c;
     color: white;
@@ -125,28 +126,6 @@ body {
 
 .show {display:block;}
 
-.vertical-menu {
-    /*width: 600px; /* Set a width if you like */
-}
-
-.vertical-menu a {
-    background-color: #eee; /* Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-}
-
-.vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-}
-
-.vertical-menu a.active {
-    background-color: #1abc9c; /* Add a green color to the "active/current" link */
-    color: white;
-}
-
-
 /* Footer */
 .footer {
     padding: 1px;
@@ -154,16 +133,6 @@ body {
     background: #1abc9c;
     color: white;
 }
-
-.btn {
-    border: none; /* Remove borders */
-    color: white; /* Add a text color */
-    padding: 16px 30px; /* Add some padding */
-    cursor: pointer; /* Add a pointer cursor on mouse-over */
-}
-
-.home {background-color: #1abc9c;} 
-.home:hover {background-color: #000000;}
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -190,46 +159,82 @@ body {
 </div>
 
 <div class="navbar">
-  <a href="https://projectdemos.uqcloud.net/webadvertisingdb/homepage.php">Logout</a>
-  <a class = "active" href="https://projectdemos.uqcloud.net/webadvertisingdb/000.php">Queries</a>
+  <a class = "active" 
+href="https://projectdemos.uqcloud.net/webadvertisingdb/homepage.php" class="right">Home</a>
 </div>
 
 <div class="row">
-    <div class="main">
-      <p>Welcome Back, Administrator!. What would you like to do?</p>
-      <div class="vertical-menu">
-        <a href="#" class="active">Select from choices below</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q1.php">Get information about Advertisers in the system</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q2.php">Get information about Ads in the system</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q3.php">Get attributes of users clicking on Ads</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q4.php">Generate Advertiser Bill</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q5.php">Get top Revenue generating Advertisers</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q6.php">Get competitive Advertisers (Bidding on all Ad slots)</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q7.php">Get information about Gender distribution among users</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q8.php">Get information about Age distribution by Gender among users</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q9.php">Get information about Age, Click and Revenue distribution across ad space</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q10.php">Get information about Clicks at Ad grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q11.php">Get information about Clicks at Advertiser grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q12.php">Get information about Revenue at Ad grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q13.php">Get information about Revenue at Advertiser grain</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q14.php">Get information about Average cost per click of Ads</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q15.php">Get information about Slot bidding by Advertisers</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000_q16.php">Get information about Advertiser performance across slots</a>
-      </div>
-    </div>
+  <div class="main">
+      
+      <p>
+Welcome Advertiser!!! You can manage your ad inventory, understand user interaction and monetisation of your ads on this website.Please login to continue.
+      <br/><br/>
+Are you interested in advertising at UofU website?. Contact us to discuss opportunities for you.
+      <br/><br/>
+     <h2>Web Advertising</h2>
+      Website advertising domain deals with monetisation of ad space on website. Users accessing the webpages on the website interact with the ads being displayed on the webpage supplied by the advertisers and they pay revenue to the website for this service.
+<br/><br/>
+UofU website has 2 units of ad space each on 4 of its webpages: home, events, student help and discussion forum.Their 5th webpage i.e. Contact us does not have any ads.When a user lands on a webpage of the website he may be signed on or be a guest. If a user is signed on then we can associate the user activity with their attributes. The ads supplied by the advertiser will be shown on ad spaces in the webpages and advertisers will pay the website an amount based on user clicks received at the end of the day. The cost of click on each slot is decided by UofU and based on clicks made Advertiser will pay the equivalent amount.
+<br/><br/>
+</p>
+<h2>Performance Monitoring Website</h2>
+This website enables Administrator to get the following information:
+<ul>
+<li>Ads, Advertisers and Partner Websites in the system</li>
+<li>Attributes of users clicking on Ads</li>
+<li>Advertiser billing details</li>
+<li>Top revenue generatiing Advertisers</li>
+<li>Competitive Advertisers</li>
+<li>Gender distribution of people likely to click on the ads</li>
+<li>Age distribution of people likely to click on the ads</li>
+<li>User age, click and revenue distribution across ad space</li>
+<li>Clicks at Ad and Advertiser grain</li>
+<li>Revenue at Ad and Advertiser grain</li>
+<li>Average Cost per Click across advertisers</li>
+<li>Slots Advertisers bid on</li>
+<li>Slots Advertisers perform on</li>
+</ul>
+Additionally Administrator can perform the following DML operations
+<ul>
+<li>Update Member Attributes</li>
+<li>Delete Ads, Advertisers and Partner Website data</li>
+</ul>
+Advertisers can get the following information
+<ul>
+<li>Their ads in the system</li>
+<li>Attributes of users clicking on their system</li>
+<li>Performance of their Ads</li>
+</ul>
 
-  <div class="side">
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">About Database</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/Schema.php">Schema</a>
-        <a href="https://projectdemos.uqcloud.net/webadvertisingdb/SQL_Queries.php">SQL Queries</a>
-      </div>
-    </div>
+</p>
   </div>
 
+
+  
+<div class="side">
+    <p>Manage your account here<p>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Click to Login</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/101.php">101:The Cat</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/102.php">102: Big Panda</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/103.php">103: Express Post</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/104.php">104: Uni Salon</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/105.php">105: Bupa</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/106.php">106: Time To Read</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/107.php">107: Iglu</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/108.php">108: Uber Eats</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/109.php">109: Travel Tour</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/110.php">110: Golden Apple</a>
+    <a href="https://projectdemos.uqcloud.net/webadvertisingdb/000.php">Administrator</a>
+
+  </div>
+
+
+</div>
 </div>
 
+</div>
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -252,6 +257,7 @@ window.onclick = function(event) {
   }
 }
 </script>
+
 
 <div class="footer">
   <p>&nbsp&nbsp&nbspDesign by Ankit Sharma and Yunqi Zhang</p>
